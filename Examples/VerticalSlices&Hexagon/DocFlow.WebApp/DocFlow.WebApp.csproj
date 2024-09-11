@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DocFlow.Application\DocFlow.Application.csproj" />
+    <ProjectReference Include="..\DocFlow.Domain\DocFlow.Domain.csproj" />
+    <ProjectReference Include="..\DocFlow.Infrastructure\DocFlow.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>

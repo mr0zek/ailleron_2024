@@ -1,0 +1,19 @@
+
+POST http://localhost:12121/api/documents/ HTTP/1.1
+content-type: application/json
+
+{
+  "documentType" : "PROCEDURE",
+  "creatorId" : "TestCreator",
+  "Title" : "TestTitle"
+}
+
+
+
+POST http://localhost:12121/api/documents/1/verifiers/ HTTP/1.1
+content-type: application/json
+
+{
+    "verifierId" : "TestCreator"
+}
+
