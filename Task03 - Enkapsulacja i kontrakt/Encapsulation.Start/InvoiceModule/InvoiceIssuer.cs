@@ -1,6 +1,6 @@
 ﻿namespace InvoiceModule
 {
-  public class InvoiceIssuer : IInvoiceIssuer
+  internal class InvoiceIssuer : IInvoiceIssuer
   {
     private IDiscountCalculator _discountCalculator;
 
