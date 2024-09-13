@@ -1,0 +1,6 @@
+2023-09-28 22:47:18.438 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-28 22:47:18.474 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-28 22:47:18.475 +02:00 [INF] Hosting environment: Development
+2023-09-28 22:47:18.476 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - CreateRestModule.Finish\src\SFC\
+2023-09-28 22:47:31.365 +02:00 [INF] HTTP GET /api/v1/user/Sensors responded 200 in 231.8162 ms
+2023-09-28 22:47:57.417 +02:00 [INF] HTTP POST /api/v1/user/Sensors responded 202 in 7682.7834 ms

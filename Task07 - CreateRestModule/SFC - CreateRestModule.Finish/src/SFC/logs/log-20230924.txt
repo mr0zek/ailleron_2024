@@ -1,0 +1,9 @@
+2023-09-24 22:40:07.477 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-24 22:40:07.509 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-24 22:40:07.510 +02:00 [INF] Hosting environment: Development
+2023-09-24 22:40:07.511 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-24 22:42:39.605 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-24 22:42:39.642 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-24 22:42:39.643 +02:00 [INF] Hosting environment: Development
+2023-09-24 22:42:39.644 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-24 22:42:48.013 +02:00 [INF] HTTP GET /api/v1/NotificationDashboard responded 200 in 231.6373 ms
