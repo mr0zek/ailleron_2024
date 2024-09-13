@@ -1,0 +1,397 @@
+2023-09-22 14:42:52.626 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 14:42:52.664 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 14:42:52.666 +02:00 [INF] Hosting environment: Development
+2023-09-22 14:42:52.666 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 14:43:05.651 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 14:43:05.938 +02:00 [INF] HTTP GET /api/v1/Dashboard responded 200 in 289.2466 ms
+2023-09-22 14:53:51.364 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 14:53:51.402 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 14:53:51.404 +02:00 [INF] Hosting environment: Development
+2023-09-22 14:53:51.405 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 14:54:15.578 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 21:05:39.364 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:05:39.396 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:05:39.398 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:05:39.398 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:05:48.369 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 21:06:29.789 +02:00 [ERR] HTTP POST /api/v1/Sensors responded 500 in 41422.9663 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler' can be invoked with the available services and parameters:
+Cannot resolve parameter 'SFC.Sensors.Features.RegisterMeasurement.ISensorRepository sensorRepository' of constructor 'Void .ctor(SFC.Sensors.Features.RegisterMeasurement.IMeasurementRepository, SFC.Sensors.Features.RegisterMeasurement.ISensorRepository)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 19
+   at SFC.UserApi.Features.Sensors.SensorsController.Post(PostSensorModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.UsersApi\Features\Sensors\SensorsController.cs:line 32
+   at lambda_method537(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 21:07:22.035 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:07:22.067 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:07:22.068 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:07:22.069 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:07:29.337 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 21:11:32.579 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:11:32.613 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:11:32.614 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:11:32.614 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:12:02.907 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 21:12:36.970 +02:00 [ERR] HTTP POST /api/v1/Sensors responded 500 in 34065.9952 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler' can be invoked with the available services and parameters:
+Cannot resolve parameter 'SFC.Sensors.Features.RegisterMeasurement.ISensorRepository sensorRepository' of constructor 'Void .ctor(SFC.Sensors.Features.RegisterMeasurement.ISensorRepository)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 19
+   at SFC.UserApi.Features.Sensors.SensorsController.Post(PostSensorModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.UsersApi\Features\Sensors\SensorsController.cs:line 32
+   at lambda_method537(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 21:14:19.169 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:14:19.202 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:14:19.203 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:14:19.204 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:14:27.207 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-09-22 21:14:27.484 +02:00 [INF] HTTP GET /api/v1/Dashboard responded 200 in 279.6302 ms
+2023-09-22 21:14:49.570 +02:00 [ERR] HTTP POST /api/v1/Measurements responded 500 in 12098.6409 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating SFC.Sensors.Features.RegisterMeasurement.RegisterMeasurementHandler.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'SFC.Sensors.Features.RegisterMeasurement.RegisterMeasurementHandler' can be invoked with the available services and parameters:
+Cannot resolve parameter 'SFC.Sensors.Infratructure.ISensorRepository sensorRepository' of constructor 'Void .ctor(SFC.Sensors.Features.RegisterMeasurement.IMeasurementRepository, SFC.Sensors.Infratructure.ISensorRepository)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 19
+   at SFC.SensorApi.Features.RecordMeasurement.MeasurementsController.Post(PostMeasurementModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.SensorApi\Features\RecordMeasurement\MeasurementsController.cs:line 29
+   at lambda_method540(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 21:15:07.577 +02:00 [INF] HTTP POST /api/v1/Accounts responded 201 in 266.4603 ms
+2023-09-22 21:17:47.384 +02:00 [INF] HTTP POST /api/v1/Accounts/0b4ded61c2c54a6e8fc2ee97691bd1fa/confirmation responded 200 in 51.3340 ms
+2023-09-22 21:20:47.772 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:20:47.804 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:20:47.805 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:20:47.805 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:26:03.591 +02:00 [ERR] HTTP POST /api/v1/Sensors responded 500 in 306908.2360 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'SFC.Sensors.Features.RegisterSensor.RegisterSensorHandler' can be invoked with the available services and parameters:
+Cannot resolve parameter 'SFC.Sensors.Infratructure.ISensorRepository sensorRepository' of constructor 'Void .ctor(SFC.Sensors.Infratructure.ISensorRepository)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 19
+   at SFC.UserApi.Features.Sensors.SensorsController.Post(PostSensorModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.UsersApi\Features\Sensors\SensorsController.cs:line 32
+   at lambda_method531(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 21:34:25.890 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:34:25.922 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:34:25.923 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:34:25.924 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:34:35.151 +02:00 [ERR] HTTP POST /api/v1/Sensors responded 500 in 19.2535 ms
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating SFC.UserApi.Features.Sensors.SensorsController.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found on type 'SFC.UserApi.Features.Sensors.SensorsController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'SFC.Sensors.Features.SensorQuery.ISensorsPerspective sensorsPerspective' of constructor 'Void .ctor(SFC.Infrastructure.Interfaces.ICommandBus, SFC.Sensors.Features.SensorQuery.ISensorsPerspective, SFC.Infrastructure.Interfaces.IIdentityProvider)'.
+
+See https://autofac.rtfd.io/help/no-constructors-bindable for more info.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass14_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 21:41:43.462 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:41:43.497 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:41:43.498 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:41:43.503 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:42:15.192 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:42:15.231 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:42:15.232 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:42:15.233 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 21:49:49.752 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 21:49:49.783 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 21:49:49.784 +02:00 [INF] Hosting environment: Development
+2023-09-22 21:49:49.785 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:01:41.006 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:01:41.039 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:01:41.041 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:01:41.042 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:03:18.465 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:03:18.497 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:03:18.498 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:03:18.499 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:03:28.116 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 246.8719 ms
+2023-09-22 22:03:42.867 +02:00 [INF] HTTP GET /api/sensors/0777d8d3-d811-4247-98b5-f8e1002cfe35 responded 404 in 0.1421 ms
+2023-09-22 22:04:17.159 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:04:17.197 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:04:17.198 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:04:17.200 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:04:27.958 +02:00 [INF] HTTP GET /api/v1/sensors/0777d8d3-d811-4247-98b5-f8e1002cfe35 responded 200 in 229.0194 ms
+2023-09-22 22:04:28.032 +02:00 [INF] HTTP GET /favicon.ico responded 404 in 0.1262 ms
+2023-09-22 22:04:35.823 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 41.3347 ms
+2023-09-22 22:05:48.848 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:05:48.878 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:05:48.880 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:05:48.881 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:06:00.875 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 245.6746 ms
+2023-09-22 22:06:34.407 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:06:34.439 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:06:34.441 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:06:34.442 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:06:41.910 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 244.1963 ms
+2023-09-22 22:06:53.954 +02:00 [INF] HTTP GET /api/v1.0/sensors/dc12b188-1fc3-4e8a-96a4-fafa7b44eb2f responded 200 in 24.6296 ms
+2023-09-22 22:17:22.743 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:17:22.777 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:17:22.779 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:17:22.779 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:17:49.318 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 244.9857 ms
+2023-09-22 22:18:38.875 +02:00 [ERR] HTTP POST /api/v1/sensors/0ca67253-0eaa-4f71-a316-841fb5c66340/measurements responded 500 in 39508.5910 ms
+SFC.Sensors.Features.RegisterMeasurement.Contract.UnknownSensorException: Unknown sensor : 0ca67253-0eaa-4f71-a316-841fb5c66340
+   at SFC.Sensors.Features.RegisterMeasurement.RegisterMeasurementHandler.Handle(RegisterMeasurementCommand command)
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 20
+   at SFC.SensorApi.Features.RecordMeasurement.MeasurementsController.Post(Guid sensorId, PostMeasurementModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.SensorApi\Features\RecordMeasurement\MeasurementsController.cs:line 29
+   at lambda_method532(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 22:19:27.819 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:19:27.850 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:19:27.853 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:19:27.854 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:19:45.102 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:19:45.132 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:19:45.134 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:19:45.134 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:20:40.038 +02:00 [ERR] HTTP POST /api/v1/sensors/0ca67253-0eaa-4f71-a316-841fb5c66340/measurements responded 500 in 46743.6722 ms
+System.NotSupportedException: The member elementName of type SFC.Sensors.Features.RegisterMeasurement.Contract.ElementName cannot be used as a parameter value
+   at Dapper.SqlMapper.LookupDbType(Type type, String name, Boolean demand, ITypeHandler& handler) in /_/Dapper/SqlMapper.cs:line 493
+   at Dapper.SqlMapper.CreateParamInfoGenerator(Identity identity, Boolean checkForDuplicates, Boolean removeUnused, IList`1 literals) in /_/Dapper/SqlMapper.cs:line 2619
+   at Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache) in /_/Dapper/SqlMapper.cs:line 1818
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 643
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 519
+   at SFC.Sensors.Features.RegisterMeasurement.MeasurementRepository.Add(Guid sensorId, DateTime date, ElementName elementName, Decimal elementValue) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Sensors\Features\RegisterMeasurement\MeasurementRepository.cs:line 22
+   at SFC.Sensors.Features.RegisterMeasurement.RegisterMeasurementHandler.Handle(RegisterMeasurementCommand command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Sensors\Features\RegisterMeasurement\RegisterMeasurementHandler.cs:line 27
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 20
+   at SFC.SensorApi.Features.RecordMeasurement.MeasurementsController.Post(Guid sensorId, PostMeasurementModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.SensorApi\Features\RecordMeasurement\MeasurementsController.cs:line 29
+   at lambda_method531(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 22:21:17.296 +02:00 [ERR] HTTP POST /api/v1/sensors/0ca67253-0eaa-4f71-a316-841fb5c66340/measurements responded 500 in 28517.5746 ms
+System.NotSupportedException: The member elementName of type SFC.Sensors.Features.RegisterMeasurement.Contract.ElementName cannot be used as a parameter value
+   at Dapper.SqlMapper.LookupDbType(Type type, String name, Boolean demand, ITypeHandler& handler) in /_/Dapper/SqlMapper.cs:line 493
+   at Dapper.SqlMapper.CreateParamInfoGenerator(Identity identity, Boolean checkForDuplicates, Boolean removeUnused, IList`1 literals) in /_/Dapper/SqlMapper.cs:line 2619
+   at Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache) in /_/Dapper/SqlMapper.cs:line 1818
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 643
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 519
+   at SFC.Sensors.Features.RegisterMeasurement.MeasurementRepository.Add(Guid sensorId, DateTime date, ElementName elementName, Decimal elementValue) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Sensors\Features\RegisterMeasurement\MeasurementRepository.cs:line 22
+   at SFC.Sensors.Features.RegisterMeasurement.RegisterMeasurementHandler.Handle(RegisterMeasurementCommand command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Sensors\Features\RegisterMeasurement\RegisterMeasurementHandler.cs:line 27
+   at SFC.Infrastructure.Bus.Send[T](T command) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.Infrastructure\Bus.cs:line 20
+   at SFC.SensorApi.Features.RecordMeasurement.MeasurementsController.Post(Guid sensorId, PostMeasurementModel model) in C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC.SensorApi\Features\RecordMeasurement\MeasurementsController.cs:line 29
+   at lambda_method531(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-22 22:21:48.964 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:21:48.999 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:21:49.000 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:21:49.001 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:23:16.150 +02:00 [INF] Now listening on: http://localhost:5000
+2023-09-22 22:23:16.181 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-22 22:23:16.183 +02:00 [INF] Hosting environment: Development
+2023-09-22 22:23:16.183 +02:00 [INF] Content root path: C:\My\Trainings\Cwiczenia-ModularMonolith\Task08 - CreateRestModule\SFC - Api\src\SFC\
+2023-09-22 22:23:24.441 +02:00 [INF] HTTP POST /api/v1/Sensors responded 202 in 246.6096 ms
+2023-09-22 22:23:40.551 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 29.6224 ms
+2023-09-22 22:23:46.188 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 2.1853 ms
+2023-09-22 22:23:46.941 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 5.7790 ms
+2023-09-22 22:23:47.440 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 3.0804 ms
+2023-09-22 22:23:47.901 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 4.5100 ms
+2023-09-22 22:23:48.106 +02:00 [INF] HTTP POST /api/v1/sensors/2e832c0f-26d6-4345-8e9e-631f28f8ec31/measurements responded 200 in 2.2708 ms
